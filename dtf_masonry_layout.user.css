@@ -1,0 +1,69 @@
+/* ==UserStyle==
+@name			DTF Masonry Layout
+@namespace		github.com/openstyles/stylus
+@version		1.0.0
+@description	Masonry-верстка с возможностью выбора количества колонок для DTF.ru
+@author			Delmor_S
+@var			number	columns_num  "Введите количество колонок" [
+]
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document domain("dtf.ru") {
+
+	.app--content-feed.app--left-column-on.app--right-column-on #page_wrapper, 
+	.special-job-teaser--entry, 
+	.l-entry, 
+	.special-job-teaser--index, 
+	.app--content-2cols-entry #page_wrapper, 
+	.app--content-2cols-fixed #page_wrapper, 
+	.messenger, 
+	.subsite_head, 
+	.subsites_catalog, 
+	.mini-editor, 
+	.news_widget, 
+	.app--content-feed.app--left-column-off.app--right-column-on #page_wrapper
+	{
+		max-width: none !important;
+		width: inherit !important;
+		margin: 0px 28px;
+	}
+	
+	.page--index
+	{
+		width: inherit !important;
+	}
+	
+	.page--index .ui-sorting
+	{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	
+	.feed__chunk, .search_results__content
+	{
+		column-count: columns_num;
+		column-gap: 28px;
+	}
+	
+	.feed__item, .search_results__chunk
+	{
+		break-inside: avoid;
+		max-width: 100% !important;
+		height: 100% !important;	
+	}
+	
+	.feed__item div[class*="content--embed"] {
+		max-width: 100% !important;
+	}
+
+	.new-entries-horizon
+	{
+		max-height: 100px;
+	}
+	
+	.vote {
+		height: 30px !important;
+		width: 90px !important;
+	}
+}

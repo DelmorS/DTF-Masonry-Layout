@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name			DTF Masonry Layout
 @namespace		github.com/openstyles/stylus
-@version		1.0.1
+@version		1.0.2
 @description	Masonry-верстка с возможностью выбора количества колонок для DTF.ru
 @author			Delmor_S
-@var			number	columns_num  "Введите количество колонок" [
+@var			number	columns_num  "Введите количество колонок" [2] [
 ]
 @preprocessor   stylus
 ==/UserStyle== */
